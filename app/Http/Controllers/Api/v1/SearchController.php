@@ -8,10 +8,11 @@ use Illuminate\Http\Request;
 class SearchController extends Controller
 {
     public function search($code, $keyword) {
-        $code = strtoupper($code);
+        $codeq = str_replace(' ', '_', strtolower($code));
+        $code = str_replace(' ', '', ucwords($code, ' '));
         $keyword = strtolower($keyword);
         $model = "App\Models\\" . $code;
-        $results = $model::where('name', 'like', '%' . $keyword . '%')->get();
+        $results = $model::where($codeq . '_name', 'like', '%' . $keyword . '%')->get();
         return response()->json($results);
     }
 }

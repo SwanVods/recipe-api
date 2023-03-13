@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\v1\FoodCategoryController;
 use App\Http\Controllers\Api\v1\FoodController;
 use App\Http\Controllers\Api\v1\IngredientController;
+use App\Http\Controllers\Api\v1\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +21,6 @@ use App\Http\Controllers\Api\v1\IngredientController;
 Route::resource('food-category', FoodCategoryController::class)->except(['edit','create']);
 Route::resource('food', FoodController::class)->except(['edit','create']);
 Route::resource('ingredient', IngredientController::class)->except(['edit','create']);
+
+Route::get('search/{code}/{keyword?}', [SearchController::class, 'search']);
 

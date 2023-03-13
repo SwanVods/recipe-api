@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('ingredient_name');
             $table->string('ingredient_amount');
             $table->string('ingredient_unit');
-            $table->string('ingredient_food_id');
+            $table->foreignId('ingredient_food_id')->constrained('food');
             $table->timestamps();
         });
     }
