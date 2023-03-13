@@ -1,66 +1,60 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Simple Receipt CRUD Application
+This is a simple CRUD application for managing receipts and their ingredients. The application is designed to store data in a MySQL database and provides an easy-to-use user interface for creating, reading, updating, and deleting receipts and ingredients.
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Table Structure
+The application has three tables:
+1. FoodCategory - This table contains the categories of receipts. The table has the following columns:
+   - id - The unique identifier of the category.
+   - food_category_name - The name of the category.
+2. Food - This table contains the Dish. The table has the following columns:
+   - id - The unique identifier of the dish.
+   - food_name - The name of the dish.
+   - food_description - The description of the dish.
+   - food_category_id - The foreign key to the Category table.
+3. Ingredient - This table contains the ingredients of the dishs. The table has the following columns:
+4. - id - The unique identifier of the ingredient.
+5. - ingredient_name - The name of the ingredient.
+6. - ingredient_amount - The amout of the ingredient.
+7. - ingredient_unit - The unit of the ingredient.
+8. - ingredient_food_id - The foreign key to the Food table.
 
-## About Laravel
+![ER Diagram](graph.png "ER Diagram of the table")
+   
+## Functionality
+The application provides the following functionality:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- View all categories, receipts, and ingredients in separate pages.
+- Create new categories, receipts, and ingredients.
+- Edit existing categories, receipts, and ingredients.
+- Delete existing categories, receipts, and ingredients.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Requirements 
+To run the application, you need to have the following:
+- PHP version 8.1 or later.
+- MySQL database.
+- Web server like Apache or Nginx.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Installation
+To install the application, follow these steps:
+1. Clone the repository or download the source code.
+2. Create a new MySQL database.
+3. Copy the .env file `cp .env.example .env`
+4. Configure the database connection by editing the .env file in the root directory of the application.
+5. Run : 
+   ```
+   composer install
+   ```
+   and then run :
+   ```
+   php artisan migrate
+   ```
+6. Then run :
+    ```
+   php artisan serve
+   ```
+7. To test, run :
+    ```
+    php artisan test
+    ```
+## Conclusion
+This is a simple and easy-to-use CRUD application for managing receipts and their ingredients. It provides all the basic functionality you need to store, edit, and delete your receipts and ingredients. Feel free to customize and extend it to fit your needs.
