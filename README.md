@@ -12,11 +12,11 @@ The application has three tables:
    - food_description - The description of the dish.
    - food_category_id - The foreign key to the Category table.
 3. Ingredient - This table contains the ingredients of the dishs. The table has the following columns:
-4. - id - The unique identifier of the ingredient.
-5. - ingredient_name - The name of the ingredient.
-6. - ingredient_amount - The amout of the ingredient.
-7. - ingredient_unit - The unit of the ingredient.
-8. - ingredient_food_id - The foreign key to the Food table.
+   - id - The unique identifier of the ingredient.
+   - ingredient_name - The name of the ingredient.
+   - ingredient_amount - The amout of the ingredient.
+   - ingredient_unit - The unit of the ingredient.
+   - ingredient_food_id - The foreign key to the Food table.
 
 ![ER Diagram](graph.png "ER Diagram of the table")
    
