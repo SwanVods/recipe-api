@@ -1,9 +1,9 @@
-# Simple Receipt CRUD Application
-This is a simple CRUD application for managing receipts and their ingredients. The application is designed to store data in a MySQL database and provides an easy-to-use user interface for creating, reading, updating, and deleting receipts and ingredients.
+# Simple Recipe CRUD Application
+This is a simple CRUD application for managing recipe and their ingredients. The application is designed to store data in a MySQL database and provides an easy-to-use user interface for creating, reading, updating, and deleting recipes and ingredients.
 
 ## Table Structure
 The application has three tables:
-1. FoodCategory - This table contains the categories of receipts. The table has the following columns:
+1. FoodCategory - This table contains the categories of recipes. The table has the following columns:
    - id - The unique identifier of the category.
    - food_category_name - The name of the category.
 2. Food - This table contains the Dish. The table has the following columns:
@@ -23,10 +23,10 @@ The application has three tables:
 ## Functionality
 The application provides the following functionality:
 
-- View all categories, receipts, and ingredients in separate pages.
-- Create new categories, receipts, and ingredients.
-- Edit existing categories, receipts, and ingredients.
-- Delete existing categories, receipts, and ingredients.
+- View all categories, recipes, and ingredients in separate pages.
+- Create new categories, recipes, and ingredients.
+- Edit existing categories, recipes, and ingredients.
+- Delete existing categories, recipes, and ingredients.
 
 ## Requirements 
 To run the application, you need to have the following:
@@ -57,4 +57,4 @@ To install the application, follow these steps:
     php artisan test
     ```
 ## Conclusion
-This is a simple and easy-to-use CRUD application for managing receipts and their ingredients. It provides all the basic functionality you need to store, edit, and delete your receipts and ingredients. Feel free to customize and extend it to fit your needs.
+This is a simple and easy-to-use CRUD application for managing recipes and their ingredients. It provides all the basic functionality you need to store, edit, and delete your recipes and ingredients. Feel free to customize and extend it to fit your needs.
